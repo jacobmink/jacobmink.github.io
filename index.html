@@ -1,10 +1,49 @@
 <!DOCTYPE html>
+
 <html>
-<head>    
+<head>
+    <script type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <title>Gimme a break</title>
+    <link rel="stylesheet" href="style_page.css">
+   
 </head>
-<body>
-    <h1>Test Site</h1>
-    <p>Let's get it going.</p>
-</body>
     
+    
+<body onload="rolling_script('target')"
+    <basefont color='black' face='arial' size='4'>
+      <div style="position:relative; z-index: 2">
+            <h1 style='text-align: center'>KitKat Adventure</h1>
+            <pre id='target' style='text-align: center'> IG: @gimmeabreak11 </pre>
+
+            <script>
+                function rolling_script(id) {
+                    var textNode = document.getElementById(id).childNodes[0];
+                    var text = textNode.data;
+
+                    setInterval(function () {
+                    text = text.substring(1,text.length) + text[0];
+                    textNode.data = text;
+                }, 500);
+                }
+            </script>
+
+            <script>
+                function buttonClick() {
+                    var firstName = document.getElementById("fname").value;
+                    var result = (firstName == 'Jake') ? 'Hello Sir!':'Intruder Alert!';
+                    document.getElementById("demo").innerHTML = result;
+                }
+            </script>
+
+        <input type='text' id='fname' value='Jake'>
+        <button onclick="buttonClick()">Check for owner</button>
+        <p id="demo"></p>
+    </div>
+<!--
+    <div id='bg' style="position:relative; z-index: 1">
+        <img src='https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/KitKat_logo.svg/1280px-KitKa t_logo.svg.png' alt=''>
+    </div>
+-->
+</body>
 </html>
