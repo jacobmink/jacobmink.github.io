@@ -9,12 +9,11 @@
    
 </head>
     
-    
 <body onload="rolling_script('target')">
-      <div style="position:relative; z-index: 2">
+      <div id="page-wrap">
             <h1>KitKat Adventure</h1>
             <pre id='target' style='text-align: center'> IG: @gimmeabreak11 </pre>
-
+          
             <script>
                 function rolling_script(id) {
                     var textNode = document.getElementById(id).childNodes[0];
@@ -34,13 +33,41 @@
                     document.getElementById("demo").innerHTML = result;
                 }
             </script>
-
-        <input type='text' id='fname' value='Jake'>
-        <button onclick="buttonClick()">Check for owner</button>
+        
+        <div>
+            <div style="text-align: center">
+                <h2>Links:</h2>
+            </div>
+            <ul>
+                <li>
+                Instagram <br>
+                    <a class='link' href="https://www.instagram.com/gimmeabreak11/"><img src="ig.jpg" height="50px" style="border: 0"></a>
+                </li>
+                <li> 
+                    Github<br>
+                    <a class='link' href='https://github.com/jacobmink/jacobmink.github.io'><img src='githubicon.png' height='50px' style="border: 0"></a>
+                </li>
+                <li>
+                    FreeCodeCamp<br>
+                    <a class='link' href="https://www.freecodecamp.org/fccd4b55108-fb16-456a-96d5-4c979a2ad5cd"><img src="freecc.png" height="50px" style="border: 0"></a>
+                </li>
+                <li>
+                    CodeWars<br>
+                    <a class='link' href=#><img src="codewars.jpg" height="50px" style="border: 0"></a>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <br>
+          
+        <div style="text-align: center">
+            Please enter your name: <br>
+        <input type='text' id='fname' value='Jake' style="text-align: center">
+        <br>
+        <button class='button' onclick="buttonClick()">Check for owner</button>
         <p id="demo"></p>
-    </div>
-    <div id='bg' style="position:relative; z-index: 1">
-        <img src='../kitkatlogo.png' alt=''>
+        </div>
     </div>
 </body>
+   
 </html>
