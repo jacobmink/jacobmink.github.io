@@ -89,11 +89,11 @@
                         yyyy = date.getFullYear(),
                         HH = (date.getHours() <= 12)? date.getHours(): date.getHours() - 12,
                         MM = (date.getMinutes() < 10) ? '0' + date.getMinutes(): date.getMinutes(),
-                        SS = date.getSeconds();
+                        SS = (date.getSeconds() < 10) ?  '0' + date.getSeconds(): date.getSeconds();
                     var fancyDate = [mm,dd,yyyy].join('/'),
                         fancyTime = [HH,MM,SS].join(':');
                     
-                    document.getElementById('time').innerHTML = [dayOfWeek,fancyDate,fancyTime].join(' ');
+                    document.getElementById('time').innerText = dayOfWeek + '\n' + fancyDate + '\n' + fancyTime;
                     
                     setTimeout(rightNow, 500);
                 }

@@ -150,7 +150,8 @@ ul#navlist li {
 }
 
 #time {
-    font-family: fantasy;
+    font-family: Lucida Console, Helvetica, sans-serif;
+    font-weight: bold;
     padding: 0;
     margin: 0;
 }
