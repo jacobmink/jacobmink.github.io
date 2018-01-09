@@ -138,6 +138,23 @@ li {
     box-shadow: 0 0 20px black; 
 }
 
+ul#navlist {
+    text-align: center;
+    width: auto;
+    display: inline-block;
+    
+}
+
+ul#navlist li {
+    display: inline-block;
+}
+
+#time {
+    font-family: fantasy;
+    padding: 0;
+    margin: 0;
+}
+
 
 @keyframes colorize {
     0% {
