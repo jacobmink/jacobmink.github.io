@@ -118,24 +118,26 @@ li {
 
 .hiddenList {
     display: none;
+    transition-duration: .4s;
     
 }
 
 .showList {
+    text-align: center;
     background: beige;
     padding: 5px 5px;
     margin: 10px;
     width: 90px;
     border-radius: 10px;
+    transition-duration: .4s;
 }
 
 .showList:hover ul.hiddenList {
     display: inline-block;
     font-size: 15px;
     text-align: left;
-    transition-duration: height 1s;
-    -webkit-transition-duration: height 1s;
-    -moz-transition-duration: height 1s;
+    padding: 0;
+    
 }
 
 #container {
