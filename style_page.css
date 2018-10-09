@@ -1,5 +1,5 @@
 html {
-    background: url(kitkatlogo.png) center center no-repeat fixed;
+    background: url('../pano.jpg');
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -24,11 +24,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: darkcyan;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     line-height: 1;
     text-decoration: underline;
-    text-decoration-style: double;
-    text-shadow: 2px 2px darkblue
 }
 
 h2 {
@@ -117,11 +116,41 @@ li {
     box-shadow: 10px 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+.hiddenList {
+    display: none;
+    
+}
+
+.showList {
+    background: beige;
+    padding: 5px 5px;
+    margin: 10px;
+    width: 90px;
+    border-radius: 10px;
+}
+
+.showList:hover ul.hiddenList {
+    display: inline-block;
+    font-size: 15px;
+    text-align: left;
+    transition-duration: height 1s;
+    -webkit-transition-duration: height 1s;
+    -moz-transition-duration: height 1s;
+}
+
 #container {
     background-image:url('../kitkatlogo.png');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
+}
+
+#container-blur {
+    background-image:url('../kitkatlogo.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    filter: blur(6px);
 }
 
 #page-wrap { 
@@ -138,14 +167,37 @@ li {
     box-shadow: 0 0 20px black; 
 }
 
-ul#navlist {
-    text-align: center;
-    width: auto;
-    display: inline-block;
+#page-wrap-blur { 
+    position: relative; 
+    z-index: 2; 
+    width: auto; 
+    height: auto;
+    margin: 50px auto; 
+    padding: 20px; 
+    background: grey; 
+    border-radius: 20px;
+    -moz-box-shadow: 0 0 20px black; 
+    -webkit-box-shadow: 0 0 20px black; 
+    box-shadow: 0 0 20px black; 
+    filter: blur(6px);
+    transition-duration: 1s;
+}
+
+#demo {
+    margin-top: 10px;
+    margin-bottom: 0px;
     
 }
 
-ul#navlist li {
+ul.navlist {
+    list-style-type: disc;
+    text-align: center;
+    width: auto;
+    display: inline-block;
+    position: relative;
+}
+
+ul.navlist li {
     display: inline-block;
 }
 
@@ -153,7 +205,33 @@ ul#navlist li {
     font-family: Lucida Console, Helvetica, sans-serif;
     font-weight: bold;
     padding: 0;
-    margin: 0;
+    margin: 10px;
+    z-index: 5;
+}
+
+.preAccess {
+    max-width: 400px;
+    font-size: 15px;
+    background-color: burlywood;
+    padding: 5px 10px;
+    margin: 40px auto;
+    border-radius: 20px;
+    -moz-box-shadow: 0 0 20px 0 black; 
+    -webkit-box-shadow: 0 0 20px 0 black; 
+    box-shadow: 0 0 20px 0 black; 
+}
+
+.preAccessGone {
+    max-width: 10px;
+}
+
+@media (max-width: 900px) {
+    ul {
+      display: block;
+        width: 90px;
+    }
+    
+    
 }
 
 
